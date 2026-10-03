@@ -1,0 +1,2 @@
+import fs from 'node:fs';import zlib from 'node:zlib';
+const assets=fs.readdirSync('dist/assets').filter(n=>/\.(js|css)$/.test(n));const gzipBytes=assets.reduce((sum,n)=>sum+zlib.gzipSync(fs.readFileSync('dist/assets/'+n)).length,0);const result={gzipBytes,budgetBytes:85000,passed:gzipBytes<=85000,scope:'built JS + CSS transfer size; not browser latency or Core Web Vitals'};fs.mkdirSync('evidence',{recursive:true});fs.writeFileSync('evidence/performance-budget.json',JSON.stringify(result,null,2));console.log(result);if(!result.passed)process.exit(1);

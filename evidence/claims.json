@@ -1,0 +1,9 @@
+{
+  "kind": "node",
+  "IMPLEMENTED": "React + TypeScript trading-journal UI with synthetic fixtures, filters/search/empty state, review modal, native focus behavior, validated risk-limit form, local persistence, malformed-storage recovery, responsive layout, Chromium interaction + axe checks, gzip transfer-size budget.",
+  "MEASURED": "See exact-commit receipt, CI artifacts and baseline. Documentation does not substitute for a passing run.",
+  "DESIGNED": "Brokerage integration, conversion experimentation and manual assistive-technology review remain extensions.",
+  "NOT_CLAIMED": "Synthetic local journal; no brokerage, trading enforcement, backend, auth, financial advice, analytics/conversion uplift, live market data, professional design-tool history, broad browser matrix, manual screen-reader audit or complete WCAG certification. Axe checks cover exercised desktop/modal/mobile states only. Gzip budget is not Core Web Vitals. Unit tests use storage/dialog fixtures; Chromium tests use real browser APIs.",
+  "safe_cv_claim": "Built a responsive React/TypeScript session journal with stateful review/filtering, validated persisted settings, keyboard/modal checks, automated accessibility checks, and a measured asset-size budget.",
+  "authorship": "Fresh AI-assisted implementation using synthetic data and public role requirements; no private source used."
+}
