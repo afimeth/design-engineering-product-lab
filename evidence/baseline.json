@@ -1,0 +1,101 @@
+{
+  "schema": "interview-lab-evidence/v1",
+  "measured_at_utc": "2026-10-03T16:37:16.487189+00:00",
+  "commit_sha": "404617fb1650cb6708363e92db231c13c55d1292",
+  "tracked_worktree_dirty": false,
+  "platform": "Windows",
+  "architecture": "AMD64",
+  "toolchain": {
+    "node": "v26.7.0",
+    "npm": "12.0.2"
+  },
+  "summary": {
+    "unit_tests": 8,
+    "unit_passed": 8,
+    "browser_expected": 3,
+    "browser_unexpected": 0,
+    "browser_flaky": 0,
+    "performance": {
+      "gzipBytes": 74232,
+      "budgetBytes": 85000,
+      "passed": true,
+      "scope": "built JS + CSS transfer size; not browser latency or Core Web Vitals"
+    }
+  },
+  "checks": [
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "fe9da612097c5b1f2808feef32b5685e7a19a607fd96c7d6abe1454f0edc7e1c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "2013b258fd4defb17ad242f1c447dd734dd9e1be76761494b4a9a3b6f2797241",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "--reporter=json",
+        "--outputFile=evidence/unit-tests.json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "2958c3a971b4cd3e0d989000b14332b7290bc8c3a7b820cf7240f095354c8bb3",
+      "stderr_sha256": "35ceb43bbbc711b35dc04c17e2403198c409071a5860a0e12f0eaa1a84d2e12d"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e163aa22682006cc0d0128f9ec2a6a87ae5923d0e8b9f7dcf117bfb109d720af",
+      "stderr_sha256": "6da425c16fe28f65b5f074340477974d6dc474d18a5f0104c70afc9d1a510c39"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "budget"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "7a3e1d091241936ac47375c3ac246623e23f4c25782f5177a7b614728293ef4a",
+      "stderr_sha256": "c2aa70541a67563ce95842bfa952a2f4cf96ddcca395f70c6dbe02154924bb78"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "test:e2e"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "a709d7d61f235b3bccc983da80e595cdbe3e779eece9579b7103b5f606c9bf4b",
+      "stderr_sha256": "a1ad0389cceea4bb2ec26470a110d40e030b01f4ace40429767bacd8fa7f44a8"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "audit",
+        "--audit-level=moderate"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "6d8c5c8f3d7684adb070417bd608d01ae90aa3dc26a65af03ffda4955f38d9a3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "passed": true,
+  "safe_cv_claim": "Built a responsive React/TypeScript session journal with stateful review/filtering, validated persisted settings, keyboard/modal checks, automated accessibility checks, and a measured asset-size budget.",
+  "unsupported_claims": "Synthetic local journal; no brokerage, trading enforcement, backend, auth, financial advice, analytics/conversion uplift, live market data, professional design-tool history, broad browser matrix, manual screen-reader audit or complete WCAG certification. Axe checks cover exercised desktop/modal/mobile states only. Gzip budget is not Core Web Vitals. Unit tests use storage/dialog fixtures; Chromium tests use real browser APIs.",
+  "ci_run_url": null
+}
